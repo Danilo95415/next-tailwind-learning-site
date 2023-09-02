@@ -153,6 +153,32 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
+                <div className="grid grid-cols-5 mt-20">
+                    <div className="mx-auto">
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                    </div>
+                    <div className="mx-auto">
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                    </div>
+                    <div className="mx-auto">
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                    </div>
+                    <div className="mx-auto">
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                    </div>
+                    <div className="mx-auto">
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                    </div>
+                </div>
+                <div className="mt-[130px] max-w-[837px] mx-auto text-center">
+                    <h1 className="text-blue-500 text-[36px] font-bold">All-In-One <span className="text-teal-500">Cloud Software.</span></h1>
+                    <p className="mt-5 text-2xl text-[#696984] leading-[1.8]">TOTC is one powerful online software suite that combines all the tools needed to run a successful school or office.</p>
+                </div>
             </div>
         </div>
     );
