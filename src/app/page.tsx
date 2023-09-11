@@ -1,16 +1,20 @@
+"use client"
 import Image from "next/image";
+import { useState, useMemo } from "react";
 
 export default function Home() {
+    const [active, setActive] = useState(false);
+
     return (
         <div>
             <div className="bg-[#49BBBD]">
                 <div className="container mx-auto">
-                    <div className="flex flex-row justify-between items-center h-20 text-white">
+                    <div className="header flex flex-row justify-between items-center h-20 text-white">
                         <div className="font-bold text-xl">
-                            <a href="#">TOTC</a>
+                            <a href="#">TOTC{active?"true":"false"}</a>
                         </div>
                         <div className="">
-                            <ul className="flex flex-row">
+                            <ul className="hidden lg:flex">
                                 <li className="mr-20">
                                     <a href="#">Home</a>
                                 </li>
@@ -43,9 +47,14 @@ export default function Home() {
                                     </a>
                                 </li>
                             </ul>
+                            <div className={"block md:hidden cursor-pointer " + (active ? 'active' : '')} onClick={() => setActive(!active)}>
+                                <div className="bar transition-all ease-in-out duration-300 w-[25px] h-[3px] my-[5px] bg-white"></div>
+                                <div className="bar transition-all ease-in-out duration-300 w-[25px] h-[3px] my-[5px] bg-white"></div>
+                                <div className="bar transition-all ease-in-out duration-300 w-[25px] h-[3px] my-[5px] bg-white"></div>
+                            </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 mt-16">
                         <div className="text-white pt-16">
                             <div className="text-[54px] font-bold">
                                 <span className="text-[#F48C06]">Studying</span>{" "}
@@ -144,40 +153,69 @@ export default function Home() {
             <div className="container mx-auto mt-[134px]">
                 <div className="max-w-3xl mx-auto">
                     <div className="w-fit">
-                        <h1 className="text-[#010514] text-5xl font-bold text-center">Our Success</h1>
+                        <h1 className="text-[#010514] text-5xl font-bold text-center">
+                            Our Success
+                        </h1>
                         <p className="text-[#010514] text-opacity-80 font-normal text-lg text-center mt-4">
-                            Ornare id fames interdum porttitor nulla turpis etiam.
-                            Diam vitae sollicitudin at nec nam et pharetra gravida.
-                            Adipiscing a quis ultrices eu ornare tristique vel nisl
-                            orc.
+                            Ornare id fames interdum porttitor nulla turpis
+                            etiam. Diam vitae sollicitudin at nec nam et
+                            pharetra gravida. Adipiscing a quis ultrices eu
+                            ornare tristique vel nisl orc.
                         </p>
                     </div>
                 </div>
-                <div className="grid grid-cols-5 mt-20">
+                <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 mt-20">
                     <div className="mx-auto">
-                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
-                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
+                            15K+
+                        </h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
+                            Students
+                        </p>
                     </div>
                     <div className="mx-auto">
-                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
-                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
+                            15K+
+                        </h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
+                            Students
+                        </p>
                     </div>
                     <div className="mx-auto">
-                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
-                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
+                            15K+
+                        </h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
+                            Students
+                        </p>
                     </div>
                     <div className="mx-auto">
-                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
-                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
+                            15K+
+                        </h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
+                            Students
+                        </p>
                     </div>
                     <div className="mx-auto">
-                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">15K+</h1>
-                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">Students</p>
+                        <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
+                            15K+
+                        </h1>
+                        <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
+                            Students
+                        </p>
                     </div>
                 </div>
                 <div className="mt-[130px] max-w-[837px] mx-auto text-center">
-                    <h1 className="text-blue-500 text-[36px] font-bold">All-In-One <span className="text-teal-500">Cloud Software.</span></h1>
-                    <p className="mt-5 text-2xl text-[#696984] leading-[1.8]">TOTC is one powerful online software suite that combines all the tools needed to run a successful school or office.</p>
+                    <h1 className="text-blue-500 text-[36px] font-bold">
+                        All-In-One{" "}
+                        <span className="text-teal-500">Cloud Software.</span>
+                    </h1>
+                    <p className="mt-5 text-2xl text-[#696984] leading-[1.8]">
+                        TOTC is one powerful online software suite that combines
+                        all the tools needed to run a successful school or
+                        office.
+                    </p>
                 </div>
             </div>
         </div>
