@@ -1,33 +1,33 @@
-"use client"
+"use client";
 import Image from "next/image";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 
 export default function Home() {
     const [active, setActive] = useState(false);
 
     return (
         <div>
-            <div className="bg-[#49BBBD]">
+            <div className="bg-[#49BBBD] px-5 md:px-0">
                 <div className="container mx-auto">
                     <div className="header flex flex-row justify-between items-center h-20 text-white">
                         <div className="font-bold text-xl">
-                            <a href="#">TOTC{active?"true":"false"}</a>
+                            <a href="#">TOTC{active ? "true" : "false"}</a>
                         </div>
                         <div className="">
                             <ul className="hidden lg:flex">
-                                <li className="mr-20">
+                                <li className="mr-12">
                                     <a href="#">Home</a>
                                 </li>
-                                <li className="mr-20">
+                                <li className="mr-12">
                                     <a href="#">Courses</a>
                                 </li>
-                                <li className="mr-20">
+                                <li className="mr-12">
                                     <a href="#">Careers</a>
                                 </li>
-                                <li className="mr-20">
+                                <li className="mr-12">
                                     <a href="#">Blog</a>
                                 </li>
-                                <li className="mr-20">
+                                <li className="mr-12">
                                     <a href="#">About Us</a>
                                 </li>
                                 <li className="mr-6">
@@ -47,7 +47,13 @@ export default function Home() {
                                     </a>
                                 </li>
                             </ul>
-                            <div className={"block md:hidden cursor-pointer " + (active ? 'active' : '')} onClick={() => setActive(!active)}>
+                            <div
+                                className={
+                                    "block lg:hidden cursor-pointer " +
+                                    (active ? "active" : "")
+                                }
+                                onClick={() => setActive(!active)}
+                            >
                                 <div className="bar transition-all ease-in-out duration-300 w-[25px] h-[3px] my-[5px] bg-white"></div>
                                 <div className="bar transition-all ease-in-out duration-300 w-[25px] h-[3px] my-[5px] bg-white"></div>
                                 <div className="bar transition-all ease-in-out duration-300 w-[25px] h-[3px] my-[5px] bg-white"></div>
@@ -74,6 +80,7 @@ export default function Home() {
                                         height={80}
                                         src={"/images/play.svg"}
                                         alt={"Play Icon"}
+                                        className="mt-[30px] scale-[2.0]"
                                     />
                                 </button>
                             </div>
@@ -164,7 +171,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 mt-20">
+                <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 mt-20 text-center">
                     <div className="mx-auto">
                         <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
                             15K+
@@ -175,34 +182,34 @@ export default function Home() {
                     </div>
                     <div className="mx-auto">
                         <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
-                            15K+
+                            75%
                         </h1>
                         <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
-                            Students
+                            Total success
                         </p>
                     </div>
                     <div className="mx-auto">
                         <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
-                            15K+
+                            35
                         </h1>
                         <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
-                            Students
+                            Main questions
                         </p>
                     </div>
                     <div className="mx-auto">
                         <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
-                            15K+
+                            26
                         </h1>
                         <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
-                            Students
+                            Chief experts
                         </p>
                     </div>
                     <div className="mx-auto">
                         <h1 className="text-8xl bg-gradient-to-r from-blue-600 to-teal-500 text-transparent bg-clip-text">
-                            15K+
+                            16
                         </h1>
                         <p className="text-[32px] text-[rgb(1,5,20)] text-opacity-80">
-                            Students
+                            Years of experience
                         </p>
                     </div>
                 </div>
@@ -215,6 +222,76 @@ export default function Home() {
                         TOTC is one powerful online software suite that combines
                         all the tools needed to run a successful school or
                         office.
+                    </p>
+                </div>
+            </div>
+            <div className="container mx-auto mt-40">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div className="bg-white px-12 relative shadow-lg pb-12 rounded-[20px]">
+                        <div className="bg-[#5B72EE] mt-[-48px] w-24 h-24 flex justify-center items-center rounded-full mx-auto ">
+                            <Image
+                                src="/images/invoice.png"
+                                width={33}
+                                height={46}
+                                alt="Invoice Icon"
+                            />
+                        </div>
+                        <div className="mt-[79px] text-center text-[#2f327d] font-medium text-3xl">
+                            Online Billing, Invoicing, & Contracts
+                        </div>
+                        <div className="mt-3 text-[#696984] text-center text-xl font-normal leading-[180%]">
+                            Simple and secure control of your organization’s
+                            financial and legal transactions. Send customized
+                            invoices and contracts
+                        </div>
+                    </div>
+                    <div className="bg-white px-12 relative shadow-lg pb-12 rounded-[20px]">
+                        <div className="bg-[#00cbb8] mt-[-48px] w-24 h-24 flex justify-center items-center rounded-full mx-auto ">
+                            <Image
+                                src="/images/calendar.png"
+                                width={48}
+                                height={48}
+                                alt="Calendar Icon"
+                            />
+                        </div>
+                        <div className="mt-[79px] text-center text-[#2f327d] font-medium text-3xl">
+                            Easy Scheduling & Attendance Tracking
+                        </div>
+                        <div className="mt-3 text-[#696984] text-center text-xl font-normal leading-[180%]">
+                            Schedule and reserve classrooms at one campus or
+                            multiple campuses. Keep detailed records of student
+                            attendance
+                        </div>
+                    </div>
+                    <div className="bg-white px-12 relative shadow-lg pb-12 rounded-[20px]">
+                        <div className="bg-[#29b9E7] mt-[-48px] w-24 h-24 flex justify-center items-center rounded-full mx-auto ">
+                            <Image
+                                src="/images/users.png"
+                                width={55}
+                                height={44}
+                                alt="Users Icon"
+                            />
+                        </div>
+                        <div className="mt-[79px] text-center text-[#2f327d] font-medium text-3xl">
+                            Customer Tracking
+                        </div>
+                        <div className="mt-3 text-[#696984] text-center text-xl font-normal leading-[180%]">
+                            Automate and track emails to individuals or groups.
+                            Skilline’s built-in system helps organize your
+                            organization
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-[130px] max-w-[1100px] mx-auto text-center">
+                    <h1 className="text-blue-500 text-[44px] font-bold">
+                        What is <span className="text-teal-500">Topic?</span>
+                    </h1>
+                    <p className="mt-5 text-2xl text-[#696984] leading-[1.8]">
+                        TOTC is a platform that allows educators to create
+                        online classes whereby they can store the course
+                        materials online; manage assignments, quizzes and exams;
+                        monitor due dates; grade results and provide students
+                        with feedback all in one place.
                     </p>
                 </div>
             </div>
